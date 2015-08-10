@@ -1,6 +1,6 @@
 @import "colors.less";
 
-// COMENTS, DUHR
+// COMMENTS, DUHR
 .comment {
   color: @comment;
   background: @comment-bg;
@@ -46,7 +46,7 @@
 }
 
 
-.constant {
+.constant() {
 
   // true, false, null, undefined
   color: @constant;
@@ -72,7 +72,9 @@
   }
 }
 
-
+.constant {
+  .constant();
+}
 
 .variable {
 
@@ -161,10 +163,30 @@
       color: @string;  // Required for the end of embedded strings in Ruby # 716
     }
   }
+
+  .embedded.js {
+    color: @code-font-color;
+
+    .punctuation {
+      .punctuation();
+
+      &.section.begin {
+        color: @red;
+      }
+    }
+
+    .constant {
+      .constant();
+    }
+
+    .meta {
+      .meta();
+    }
+  }
 }
 
 // MISC PUNCTUATION
-.punctuation {
+.punctuation() {
 
   &.terminator {
     color: @punctuation;
@@ -213,6 +235,10 @@
     color: @code-font-color;
   }
 
+}
+
+.punctuation {
+  .punctuation();
 }
 
 
@@ -352,7 +378,7 @@
   }
 }
 
-.meta {
+.meta() {
 
   &.link {
     color: @meta;
@@ -389,6 +415,10 @@
     background-color: @punctuation;
     color: @punctuation;
   }
+}
+
+.meta {
+  .meta();
 }
 
 .none {
