@@ -1,8 +1,8 @@
 {
-  "name": "seti-syntax",
+  "name": "ganon-syntax",
   "theme": "syntax",
   "version": "0.3.3",
-  "description": "Seti Syntax - A subtle dark colored theme for Atom.",
+  "description": "Ganon Syntax - A subtle dark colored theme for Atom. Forked from seti-syntax",
   "repository": "https://github.com/Ganonside/ganon-syntax",
   "license": "MIT",
   "engines": {
